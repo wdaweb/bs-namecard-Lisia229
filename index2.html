@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    * {
+      transition: 1s;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .col-md-4 img {
+      width: 100%;
+    }
+
+    .container-fluid {
+      padding: 0;
+      font-family: 'Rozha One', serif;
+    }
+
+    @media(min-width:576px) {
+      .col-sm-5 img {
+        object-fit: cover;
+        height: 100%;
+      }
+
+      .col-md-4 {
+        height: 600px;
+      }
+
+      .object-fit {
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+      }
+
+      .container-fluid {
+        position: relative;
+      }
+
+      body {
+        position: relative;
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        z-index: 1000;
+        width: 100px;
+        height: 250px;
+        top: 48vh;
+        left: -1vw;
+        transform: rotate(315deg);
+        box-shadow: 10px 10px 15px #333;
+      }
+
+      .card::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 37vh;
+        left: -6vw;
+        z-index: 1000;
+        border-style: solid;
+        border-width: 300px 0 300px 300px;
+        border-color: transparent transparent transparent #ffffff;
+      }
+
+      .container-fluid::before {
+        content: '';
+        position: absolute;
+        z-index: 1000;
+        width: 100px;
+        height: 250px;
+        top: -20%;
+        left: 96%;
+        transform: rotate(132deg);
+        box-shadow: 10px 10px 15px #333;
+      }
+
+      .container-fluid::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -55%;
+        left: 96%;
+        z-index: 1000;
+        border-style: solid;
+        transform: rotate(312deg);
+        border-width: 300px 0 300px 300px;
+        border-color: transparent transparent transparent #ffffff;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid container-sm align-items-center justify-content-center flex-sm-row">
+    <div class="card shadow bg-body">
+      <div class="row g-0 align-items-center justify-content-center">
+        <div class="col-md-4 flex-shrink-0">
+          <img
+            src="https://www.riotgames.com/darkroom/1440/08bcc251757a1f64e30e0d7e8c513d35:be16374e056f8268996ef96555c7a113/wr-cb1-announcementarticle-banner-1920x1080.png"
+            class="object-fit">
+        </div>
+        <div class="col-md-8 text-center">
+          <div class="card-body">
+            <h5 class="card-title justify-content-around">
+              <span> League Of Legends</span><br>
+              <span style="font-size: 3rem;">吉茵珂絲Jinx</span><br>
+              <span>激 鬥 峽 谷 - 暴 走 重 砲</span>
+            </h5>
+            <br>
+            <p class="card-text">
+              住址：11010台北市信義區和平東路33巷6號<br>
+              電話：03-2901-3065 <br>
+              E-Mail：jinx@gmail.com <br>
+              網站：https://leagueoflegends.com/jinx/
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
